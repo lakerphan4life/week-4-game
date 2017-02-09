@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>CrystalsCollector</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="row">
+		<h1 class="col col-md-3 titleBox">CrystalsCollector</h1>
+	</div>
+	
+	<div class="row col-md-8">
+		<div class="col col-md-8 instructionsBox">
+		Instructions:
+			<div><p>When the game begins, a random number is selected, and each crystal is given a random value. Your job is to match the random number by clicking on the crystals. You will not see the value of each crystal, but you can identify their values by clicking on each crystal.</p>
+		<p>The game ends when your score either matches or exceeds that of the random number. When the game ends, a new value will be given to each crystal, and a new random number will be selected. Your score is recorded in the aqua colored box below. 
+			</p>
+			</div>
+
+
+		</div>
+	</div>
+	
+	<div class="row col-md-8">
+		<div class="col col-md-2 randomBox">0</div>
+		<div class="col col-md-3 scoreBox">
+			<div class="col-md-12 wins">Wins: 0</div>
+			<div class="col-md-12 losses">Losses: 0</div>
+		</div>
+	</div>
+
+	<div class="row col-md-7 crystalBox">
+		<h3>Crystals: </h3>
+		<div class="col col-md-1"><img class="crystalPic crystal1 crystal1Value" src="assets/images/crystal1.png"></div>
+		<div class="col col-md-1"><img class="crystalPic crystal2" src="assets/images/crystal2.png"></div>
+		<div class="col col-md-1"><img class="crystalPic crystal3" src="assets/images/crystal3.png"></div>
+		<div class="col col-md-1"><img class="crystalPic crystal4" src="assets/images/crystal4.png"></div>
+	</div>
+	<div class="row col-md-7">
+		<div class="col col-md-5 scoreboard scoreTitle">Your Total Score is: </div>
+	</div>
+	<div class="row col-md-7">
+		<div class="col col-md-5 scoreboard userScore">0</div>
+	</div>
+
+<audio id="myAudio">
+  <source src="assets/audio/REZZ x K-D - Fourth Impact.mp3">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<p>Click the buttons to play or pause the audio.</p>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button> 
+
+<script>
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+</script>
+
+
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
